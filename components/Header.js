@@ -10,8 +10,8 @@ const Header = () => {
 
       {/* left */}
       <div className='relative flex items-center 
-                h-10 cursor-pointer my-auto '>
-        <Image 
+                h-10 cursor-pointer my-auto'>
+        <Image
             src={'https://links.papareact.com/qd3'}
             alt=''
             layout='fill'
