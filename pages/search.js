@@ -1,19 +1,26 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 const Search = () => {
+
+  const router = useRouter()
+
+  // console.log(router.query)
+
+  const result = router.query
   return (
     <div>
       <Header />
 
-      <main className='flex px-6 py-4'>
-        <section>
-            <p className='text-xs'>300+ stays for 8 people</p>
+      <main className='flex'>
+        <section className='flex-grow pt-14 px-10'>
+            <p className='text-xs'>{`300+ stays for ${result.numberOfGuests}`}</p>
             <h2 className='text-2xl font-semibold mt-2 mb-6'>
-                Stays in Afganistan
+                {`stays in ${result.location}`}
             </h2>
-            <div className='hidden md:inline-flex'>
+            <div className='hidden md:inline-flex mb-5'>
                 <p className='button '>
                     Cancellation flexibility
                 </p>
