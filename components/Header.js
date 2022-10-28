@@ -11,6 +11,7 @@ const Header = () => {
   const [searchInput, setsearchInput] = useState('')
   const [startDate, setstartDate] = useState(new Date())
   const [endDate, setendDate] = useState(new Date())
+  const [numberOfGuests, setnumberOfGuests] = useState(1)
 
   const selectionRange = {
     startDate: startDate,
@@ -78,10 +79,27 @@ const Header = () => {
 
               <UsersIcon className='h-5' />
               <input 
+                value={numberOfGuests}
+                min={1}
+                onChange={(e)=> setnumberOfGuests(e.target.value)}
                 type={'number'}
                 className='w-12 pl-2 outline-none text-lg text-red-400' />
 
             </div>
+
+            <div className='flex' >
+              <button className='flex-grow text-gray-500'>
+                Search
+              </button>
+
+                
+              <button className='flex-grow text-red-400'
+                      onClick={(e)=> setsearchInput('')} >
+                Cancel
+              </button>
+                
+            </div>
+        
 
             
         </div>
