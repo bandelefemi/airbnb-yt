@@ -40,7 +40,7 @@ export default function Home({exploreData, cardData}) {
                 img={item.img}
                 location={item.location}
                 distance={item.distance}
-                key={''}
+                key={item.img}
               />
             ))
           }
@@ -56,7 +56,7 @@ export default function Home({exploreData, cardData}) {
           <div className='flex space-x-3 overflow-scroll scrollbar-hide p-4 mt-4'>
           {
             cardData?.map(item => (
-              <MediumCard key={''}
+              <MediumCard key={item.img}
                           img={item.img}
                           title={item.title} />
             ))
