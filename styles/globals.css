@@ -28,3 +28,13 @@ a {
     background: black;
   }
 }
+
+@layer components {
+  .button {
+    @apply bg-white border text-sm 
+    rounded-full flex justify-center text-gray-500 py-1
+     transition px-3 mr-6 ease-out
+     font-semibold hover:shadow-md cursor-pointer 
+     duration-200 active:scale-90 
+  }
+}
