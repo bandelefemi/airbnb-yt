@@ -63,6 +63,7 @@ const Search = ({searchResults}) => {
                             long = {long}
                             lat = {lat}
                             title = {title}
+                            total = {total}
                             star = {star}
                              />
                 ))
