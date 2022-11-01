@@ -8,7 +8,7 @@ const InfoCard = ({img, location, description, star, title, price, total}) => {
     <div className='flex py-7 px-2 border-b cursor-pointer first:border-t 
     hover:opacity-80 hover:shadow-lg pr-4 transition duration-200 ease-out'>
         {/* image side left */}
-        <div className='w-40 h-24 md:h-52 md:w-80 flex-shrink-0 relative'>
+        <div className='w-64 h-44 md:h-52 md:w-80 flex-shrink-0 relative'>
             <Image objectFit='cover'
             src={img} alt='' layout='fill' className='rounded-md' />
         </div>
